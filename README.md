@@ -1,4 +1,4 @@
-# Info Project
+# TP solaris
 ## Author: LE DEVEHAT Léane
 ### Date: Mon 31 May 2021 23:38:05 CET
 ![](https://img.shields.io/badge/Python-%3E%3D3.9-blue.svg)
