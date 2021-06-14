@@ -18,17 +18,17 @@ def position servo():
 
 
 def changing_angle_1(angle_180, angle_90):
-    angle_180 = angle_180 + 0.00143
+    angle_180 = angle_180 + 1
     time.sleep(0.5)
     kit.servo[0].angle = angle_180
-    angle_90 = angle_90 + 0.00143
+    angle_90 = angle_90 + 1
     time.sleep(0.5)
     kit.servo[1].angle = angle_90
     return angle_90, angle_180
 
 
 def changing_angle_2(angle_180, angle_90):
-    angle_90 = angle_90 - 0.00143
+    angle_90 = angle_90 - 1
     time.sleep(0.5)
     kit.servo[1].angle = angle_90
     return angle_90

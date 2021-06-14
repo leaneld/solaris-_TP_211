@@ -16,7 +16,7 @@ kit.servo[0].angle = 0
 
 if kit.servo[0].angle < 180:
     time.sleep(0.5)
-    kit.servo[0].angle += 0.00143
+    kit.servo[0].angle += 1
     kit.continuous_servo[0].throttle = 1
 else:
 	kit.servo[0].angle = 0
@@ -24,7 +24,7 @@ else:
 kit.servo[1].angle = 90
 if kit.servo[1].angle < 180:
     time.sleep(0.5)
-    kit.servo[0].angle += 0.00143
+    kit.servo[0].angle += 1
     kit.continuous_servo[1].throttle = -1
 else:
     kit.servo[1].angle = 90
