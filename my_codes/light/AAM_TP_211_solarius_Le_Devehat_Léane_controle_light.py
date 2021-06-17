@@ -11,27 +11,40 @@ from adafruit_circuitplayground.express import cpx
 from adafruit_servokit import Servokit
 import simpleio
 
+int LDR = downright
+int LDL = downleft
+int LTR = topright
+int LTL = topleft
 
-def position servo():
-	kit.servo[0].angle = angle_180
-    kit.servo[1].angle = angle_90
-
-
-def changing_angle_1(angle_180, angle_90):
-    angle_180 = angle_180 + 1
-    time.sleep(0.5)
-    kit.servo[0].angle = angle_180
-    angle_90 = angle_90 + 1
-    time.sleep(0.5)
-    kit.servo[1].angle = angle_90
-    return angle_90, angle_180
-
-
-def changing_angle_2(angle_180, angle_90):
-    angle_90 = angle_90 - 1
-    time.sleep(0.5)
-    kit.servo[1].angle = angle_90
-    return angle_90
+def changing_angle(angle_180, angle_90):
+   if (topleft > topright):
+           servo[1] = angle_180 + 1
+           time.sleep(0.5)
+   if (topleft < topright):
+           servo[1] = angle_180 - 1
+           time.sleep(0.5)
+   if (downleft > downright):
+           servo[1] = angle_180 + 1
+           time.sleep(0.5)
+   if (downleft < downright):
+           servo[1] = angle_180 - 1
+           time.sleep(0.5)
+   if (topleft > downleft):
+           servo[2] = angle_180 - 1
+           time.sleep(0.5)
+   if (topleft < downleft):
+           servo[2] = angle_180 + 1
+           time.sleep(0.5)
+   if (topright > downright):
+           servo[2] = angle_180 - 1
+           time.sleep(0.5)
+   if (topright < downright):
+           servo[2] = angle_180 + 1
+           time.sleep(0.5)
+   kit.servo[1].angle = angle_180
+   kit.servo[2].angle = angle_90
+   kit
+   return angle_90, angle_180
 
 
 cpx.pixels.auto_write = False
